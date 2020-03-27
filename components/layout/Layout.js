@@ -20,7 +20,9 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('sm')]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
-    },
+      width: '0',
+    }, width: '55px',
+    left: 1
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -48,7 +50,7 @@ function Layout(props) {
   return (
   <>
     <Head>
-      <title> Roberth Gomez - Portfolio </title>
+      <title> Roberth Gómez - Portfolio </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700,800&display=swap" rel="stylesheet"></link>
     </Head>
@@ -67,12 +69,6 @@ function Layout(props) {
         color: white;
         flex-grow: 1;
         margin: 5em 5% 5em 5%;
-      }
-
-      @media screen and (max-width: 992px) {
-        body {
-          margin-top: 500px;
-        }
       }
       `}
     </style>

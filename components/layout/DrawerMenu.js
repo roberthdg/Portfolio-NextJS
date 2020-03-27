@@ -24,7 +24,6 @@ const DrawerMenu = props => {
             }}
           >
             <MenuItems classes={props.classes}/>
-
           </Drawer>
         </Hidden>
 

@@ -31,13 +31,13 @@ const Content = () => {
     <div className='wrapper'>
       {workExperience.map(item => (
         <Grid container spacing={1}>
-          <Grid container item xs={11} lg={3}>
+          <Grid container item xs={11} lg={2}>
             <div className='summary' />  
             <div className='year'>
               <Typography variant='h6' style={{fontWeight: '400'}}> {item.year} </Typography>
             </div>
           </Grid>
-          <Grid container item xs={11} lg={7}>
+          <Grid container item xs={11} lg={7} style={{marginLeft:'30px'}}>
             <Typography variant='h6' style={{color:'rgb(3,127,255)'}}> 
               {item.title} 
               <Typography variant='h6' style={{color:'white', fontWeight: '400'}}>{item.name}</Typography>
@@ -55,13 +55,13 @@ const Content = () => {
     <div className='wrapper'>
       {studies.map(item => (
         <Grid container spacing={1}>
-          <Grid container item xs={11} lg={3}>
+          <Grid container item xs={11} lg={2}>
             <div className='summary' />  
             <div className='year'>
               <Typography variant='h6' style={{fontWeight: '400'}}> {item.year} </Typography>
             </div>
           </Grid>
-          <Grid container item xs={11} lg={7}>
+          <Grid container item xs={11} lg={7} style={{marginLeft:'30px'}}>
             <Typography variant='h6' style={{color:'rgb(3,127,255)'}}> 
               {item.title} 
               <Typography variant='h6' style={{color:'white', fontWeight: '400'}}>{item.name}</Typography>

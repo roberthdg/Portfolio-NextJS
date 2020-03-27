@@ -18,9 +18,6 @@ const Appbar = props => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Roberthdg
-          </Typography>
         </Toolbar>
       </AppBar>
     )
