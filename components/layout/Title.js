@@ -5,20 +5,20 @@ const Title = props => {
     return(
     <div>
     <Typography component={'span'} variant='h4'>
-        <h4>{props.children}</h4>
+        <h3> <span>{props.children}</span> {props.children}</h3>
+        
     </Typography>
 
     <style jsx>{`
-
-      h4 {
+      h3 {
         font-family: 'Nunito', sans-serif; !important;
         margin: 0 0 40px 0 !important;
-        font-weight: 700;
         position: relative;
         padding-bottom: 15px;
         text-transform: uppercase;
       }
-      h4::before,h4::after {
+
+      h3::before, h3::after {
         content:'';
         position:absolute;
         left:0;
@@ -26,13 +26,24 @@ const Title = props => {
         height:5px;
         border-radius: 100px;
       }
-      h4::before {
+
+      h3::before {
         width: 100px;
         background: rgba(3,127,255,.3);
       }
-      h4::after{
+
+      h3::after{
         width: 35px;
         background: #037fff;
+      }
+
+      span {
+        color: rgb(20,23,34);
+        position: absolute;
+        font-size: 58px;
+        font-weight: 800;
+        margin-top: 30px;
+        z-index: -12;
       }
     `}</style>
     </div>

@@ -2,65 +2,115 @@ import React from 'react'
 import Title from '../layout/Title';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import LinearProgress from '@material-ui/core/LinearProgress';
-import { makeStyles } from '@material-ui/core/styles';
+import BusinessCenterOutlinedIcon from '@material-ui/icons/BusinessCenterOutlined';
+import CollectionsBookmarkOutlinedIcon from '@material-ui/icons/CollectionsBookmarkOutlined';
 
-const useStyles = makeStyles({
-  bar: {
-    backgroundColor: 'rgb(3,127,255)'
-  },
-  root: { 
-    backgroundColor:'rgb(12,51,96)',
-    barColorPrimary:'black',
-    margin:'10px 20px 20px 0',
-    height:'10px',
-    borderRadius: '100px',
-  }
-})
+const subtitleStyle = {fontWeight:'700', fontFamily: "'Nunito', sans-serif", margin: '0 0 40px 30px'}
+const iconStyle = {color: 'rgb(164,172,185)', fontSize: '30', position:'absolute', marginLeft: '-10px'}
 
-function renderRows(items) {
-  const classes = useStyles();
-  return (
-    <>
-    <Grid item xs={12} lg={6}>
-      <Typography>{Object.keys(items[0])[0]} <br/>
-        <LinearProgress variant="determinate" classes={classes} value={Object.values(items[0])[0]} />
-      </Typography>
-    </Grid>
-    <Grid item xs={12} lg={6}>
-      <Typography>{Object.keys(items[1])[0]} <br/>
-        <LinearProgress variant="determinate" classes={classes} value={Object.values(items[1])[0]} />
-      </Typography>
-    </Grid>
-    </>
-  );
-}
+const workExperience = [
+  {year: '2019 - 2020', title: 'Full-Stack Developer', name: 'Fletes Ya!', description: 'Santiago Province, Chile (Remote)'},
+  {year: '2017 - 2019', title: 'Full-Stack Developer', name: 'Global Solution - Outsourcing Group', description: 'Quito, Ecuador (Remote)'},
+  {year: '2016 - 2017', title: 'IT Regional Coordinator', name: 'Productora y Distribuidora Venezolana de Alimentos S.A.', description: 'Nueva Esparta, Venezuela'},
+  {year: '2014 - 2016', title: 'IT Analyst', name: 'Productora y Distribuidora Venezolana de Alimentos S.A.', description: 'Nueva Esparta, Venezuela'}
+
+];
+
+const studies = [
+  {year: '2010 - 2015', title: 'Systems Engineer', name: 'Universidad Nacional Experimental de la Fuerza Armada', description: 'Achieved honorable mention (Cum Laude)'},
+  {year: '2003 - 2008', title: "Bachelor's Degree in Secondary Education", name: 'U.E. Nuestra Señora de la Asunción', description: ''},
+ ];
 
 const Content = () => {
   return(
-    <>
-    <Title>My skills</Title>
-    <Grid container spacing={1}>
-      <Grid container item xs={12} spacing={1}>
-        {renderRows([{'HTML5': 90}, {'CSS3': 80}])}
-      </Grid>
-      <Grid container item xs={12} spacing={1}>
-        {renderRows([{'JavaScript': 85}, {'Python': 75}])}
-      </Grid>
-      <Grid container item xs={12} spacing={1}>
-        {renderRows([{'ReactJS': 77}, {'SQL/NoSQL': 82}])}
-      </Grid>
-    </Grid>
+
+    <div className='content'>
+    <Title>Resume</Title> 
+    <BusinessCenterOutlinedIcon style={iconStyle} /> 
+    <Typography variant='h5' style={subtitleStyle}> Working Experience</Typography> 
+    <div className='wrapper'>
+      {workExperience.map(item => (
+        <Grid container spacing={1}>
+          <Grid container item xs={11} lg={3}>
+            <div className='summary' />  
+            <div className='year'>
+              <Typography variant='h6' style={{fontWeight: '400'}}> {item.year} </Typography>
+            </div>
+          </Grid>
+          <Grid container item xs={11} lg={7}>
+            <Typography variant='h6' style={{color:'rgb(3,127,255)'}}> 
+              {item.title} 
+              <Typography variant='h6' style={{color:'white', fontWeight: '400'}}>{item.name}</Typography>
+              <Typography variant='h6' style={{color:'rgb(164,172,185)', fontWeight: '300', marginBottom:'40px'}}>{item.description}</Typography> 
+            </Typography> 
+          </Grid>
+        </Grid>
+      ))}
+    </div>
+
     <br/><br/>
 
-    <Title>Resume</Title>
-    <Typography>
-      Loremm ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna 
-      aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. 
-      Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-      Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </Typography>
-    </>
+    <CollectionsBookmarkOutlinedIcon style={iconStyle} /> 
+    <Typography variant='h5' style={subtitleStyle}>Educational Qualifications</Typography> 
+    <div className='wrapper'>
+      {studies.map(item => (
+        <Grid container spacing={1}>
+          <Grid container item xs={11} lg={3}>
+            <div className='summary' />  
+            <div className='year'>
+              <Typography variant='h6' style={{fontWeight: '400'}}> {item.year} </Typography>
+            </div>
+          </Grid>
+          <Grid container item xs={11} lg={7}>
+            <Typography variant='h6' style={{color:'rgb(3,127,255)'}}> 
+              {item.title} 
+              <Typography variant='h6' style={{color:'white', fontWeight: '400'}}>{item.name}</Typography>
+              <Typography variant='h6' style={{color:'rgb(164,172,185)', fontWeight: '300', marginBottom:'40px'}}>{item.description}</Typography> 
+            </Typography> 
+          </Grid>
+        </Grid>
+      ))}
+    </div>
+  
+    <style jsx>{`
+
+      .content {
+        font-family: 'Nunito', sans-serif !important;
+      }
+
+      .wrapper {
+        border-left: 4px solid rgb(46,52,78);
+      }
+
+      .summary::before {
+        content: '';
+        background-color: rgb(16,18,27);
+        height: 10px;
+        width: 10px;
+        position: absolute;
+        border-radius: 100px;
+        border: 4px solid rgb(46,52,78);
+        margin: 8px 0 0 -11px;
+      }
+
+      .summary::before {
+        content: '';
+        background-color: rgb(16,18,27);
+        height: 10px;
+        width: 10px;
+        position: absolute;
+        border-radius: 100px;
+        border: 4px solid rgb(46,52,78);
+        margin: 8px 0 0 -11px;
+      }
+
+      .year {
+        margin: 0 0 0 30px;
+        color: rgb(164,172,185);
+      }
+
+    `}</style>
+   </div>
   )
 }
 

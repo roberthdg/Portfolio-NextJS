@@ -24,7 +24,7 @@ const MenuItems = () => {
     >
       <Avatar alt="profile picture" src="/brand-image.jpg" style={avatarStyle} /> <hr/>
       
-      {['', 'resume', 'portfolio', 'contact'].map((text, index) => (
+      {['', 'about', 'portfolio', 'contact'].map((text, index) => (
       <Link key={index} href={index==0 ? '/' : text} >
         <a className={router.pathname == `/${text}` ? "active" : "inactive"}>
             <ListItemText 
