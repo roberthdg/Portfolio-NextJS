@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography';
 
 const Appbar = props => {
     return(
-        <AppBar position="fixed" className={props.classes.appBar} style={{backgroundColor: 'transparent', color: 'white'}}>
+        <AppBar position="fixed" className={props.classes.appBar} style={{backgroundColor: 'rgb(16,18,27)', color: 'white'}}>
         <Toolbar>
           <IconButton
             color="inherit"

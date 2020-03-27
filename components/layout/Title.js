@@ -4,14 +4,15 @@ import Typography from '@material-ui/core/Typography';
 const Title = props => {
     return(
     <div>
-    <Typography variant='h4'>
+    <Typography component={'span'} variant='h4'>
         <h4>{props.children}</h4>
     </Typography>
 
     <style jsx>{`
 
       h4 {
-        margin: 40px 0 !important;
+        font-family: 'Nunito', sans-serif; !important;
+        margin: 0 0 40px 0 !important;
         font-weight: 700;
         position: relative;
         padding-bottom: 15px;

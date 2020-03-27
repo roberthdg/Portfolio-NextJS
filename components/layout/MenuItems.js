@@ -1,5 +1,4 @@
 import React from 'react'
-import Divider from '@material-ui/core/Divider';
 import ListItemText from '@material-ui/core/ListItemText';
 import Avatar from '@material-ui/core/Avatar';
 import { Grid } from '@material-ui/core';
@@ -9,10 +8,12 @@ import { useRouter } from 'next/router'
 const avatarStyle = {
   width:'190px', 
   height:'190px',  
-  border: '8px solid rgb(46,52,78)'
+  border: '8px solid rgb(46,52,78)',
+  marginTop: '20px',
+  marginBottom: '18px'
 }
 
-const MenuItems = props => {
+const MenuItems = () => {
   const router = useRouter();
   return(
       <Grid   
@@ -21,24 +22,27 @@ const MenuItems = props => {
       alignItems="center"
       justify="center"
     >
-      <div className={props.classes.toolbar} />
-      <Avatar alt="profile picture" src="/brand-image.jpg" style={avatarStyle} />
-      <div className={props.classes.toolbar} />
+      <Avatar alt="profile picture" src="/brand-image.jpg" style={avatarStyle} /> <hr/>
+      
       {['', 'resume', 'portfolio', 'contact'].map((text, index) => (
       <Link key={index} href={index==0 ? '/' : text} >
         <a className={router.pathname == `/${text}` ? "active" : "inactive"}>
-            <ListItemText key={text} primary={index==0 ? 'home' : text} />
+            <ListItemText 
+              key={text} 
+              primary={index==0 ? 'home' : text}  
+              style={{fontFamily: "'Nunito', sans-serif"}}
+            />
         </a>
       </Link>
       ))}
-      <Divider />
+
 
       <style jsx>{`
       a {
         text-align:center;
         text-transform: uppercase;
         height: 40px;
-        padding-top: 5px;
+        padding-top: 10px;
         width: 95%;
         text-decoration: none;
       }
@@ -60,6 +64,15 @@ const MenuItems = props => {
       .inactive :hover {
         color: rgb(3,127,255);
         background-position:left bottom;
+      }
+
+      hr { 
+        border-top: 1px solid rgb(25,29,43);
+        border-left: 0px;
+        border-right: 0px;
+        border-bottom: 1px solid rgb(46,52,78);
+        width:100%;
+        margin-bottom: 50px;
       }
     `}</style>
 

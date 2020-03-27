@@ -28,17 +28,12 @@ const useStyles = makeStyles(theme => ({
       display: 'none',
     },
   },
-  // necessary for content to be below app bar
-  toolbar: theme.mixins.toolbar,
+
   drawerPaper: {
     backgroundColor: 'rgb(25,29,43)',
     color: 'rgb(164,172,196)',
     width: drawerWidth,
     border: '1px solid rgb(46,52,78)'
-  },
-  content: {
-    flexGrow: 1,
-    padding: theme.spacing(3),
   },
 }));
 
@@ -54,20 +49,33 @@ function Layout(props) {
   <>
     <Head>
       <title> Roberth Gomez - Portfolio </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700,800&display=swap" rel="stylesheet"></link>
     </Head>
 
     <div className={classes.root}>
       <DrawerMenu classes={classes} container={container} mobileOpen={mobileOpen} handleDrawerToggle={handleDrawerToggle}/>
       <Appbar classes={classes} handleDrawerToggle={handleDrawerToggle}/>
- 
-      <main className={classes.content} style={{color:'white'}}>
-        {props.children}
-        <style jsx>{`
-        :global(body){ background-color: rgb(16,18,27); !important }
-        `}</style>
-      </main>
+      <main> {props.children} </main>
     </div>
+
+    <style jsx>{`
+      :global(body){ 
+        background-color: rgb(16,18,27); 
+      }
+      main {
+        color: white;
+        flex-grow: 1;
+        margin: 5em 5% 5em 5%;
+      }
+
+      @media screen and (max-width: 992px) {
+        body {
+          margin-top: 500px;
+        }
+      }
+      `}
+    </style>
   </>
 );
 }
