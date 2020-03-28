@@ -44,13 +44,13 @@ const Content = () => {
 
     <style jsx>{`
     .home {
+      padding-top: 2em;
+      padding-right: 1em;
       width:90vw;
       height:70vh;
       display: table-cell;
       text-align: center;
       vertical-align: middle;
-      overflowX:'hidden';
-      overflowY:'hidden';
     }
 
     a{
@@ -79,8 +79,8 @@ const Content = () => {
         -ms-transform: rotate(90deg);
         transform: rotate(90deg);
 
-        width: 203vw;
-        margin-left: -60vw;
+        width: 190vw;
+        margin-left: -55vw;
         margin-top: 0vw;
       }
    }
