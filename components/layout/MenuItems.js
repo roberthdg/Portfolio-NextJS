@@ -6,21 +6,22 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 const avatarStyle = {
-  width:'190px', 
-  height:'190px',  
-  border: '8px solid rgb(46,52,78)',
-  marginTop: '20px',
+  width:'140px', 
+  height:'140px',  
+  marginLeft: '5px',
+  border: '5px solid rgb(46,52,78)',
+  marginTop: '25px',
   marginBottom: '18px'
 }
 
 const MenuItems = () => {
   const router = useRouter();
   return(
-      <Grid   
-      container
-      direction="column"
-      alignItems="center"
-      justify="center"
+    <Grid   
+    container
+    direction="column"
+    alignItems="center"
+    justify="center"
     >
       <Avatar alt="profile picture" src="/brand-image.jpg" style={avatarStyle} /> <hr/>
       
@@ -75,8 +76,9 @@ const MenuItems = () => {
         margin-bottom: 50px;
       }
     `}</style>
-
+    <img src='logo.png' height='10%' style={{opacity:'0.4', position:'absolute', bottom:'5%',zIndex:'-1'}} />
     </Grid>
+   
   )
 }
 

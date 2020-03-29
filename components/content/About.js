@@ -13,8 +13,8 @@ const Content = () => {
     <Typography>
     <Grid container spacing={1}>
       <Grid container item xs={11} lg={6}>
-        <span>
-          27-year old systems engineer from Venezuela, with over 5 years of experience as a software developer, 
+        <span className='about'>
+          Systems engineer from Venezuela, with over 5 years of experience as a software developer, 
           working on projects accross multiple platforms and programming languages.
         </span>
       </Grid>
@@ -35,6 +35,7 @@ const Content = () => {
     <br/><br/>
 
     <style jsx>{`
+
       a {
         text-align:center;
         text-transform: uppercase;
@@ -46,7 +47,9 @@ const Content = () => {
         background-color: rgb(3,127,255) !important;
       }
 
-      span {
+      .about {
+        font-weight: 300;
+        font-size: 19px;
         margin-bottom: 30px;
       }
 

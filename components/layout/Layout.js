@@ -68,7 +68,7 @@ function Layout(props) {
       main {
         color: white;
         flex-grow: 1;
-        margin: 3em 5% 3em 4em;
+        margin: 3em 4em 3em 4em;
       }
 
       @media screen and (max-width: 1142px) {

@@ -28,8 +28,8 @@ const Content = () => {
   <div className='home'>
     <div className='particles'>
       <Particles params={particlesParams}/>
-    </div>
-
+    </div> 
+   
     <Typography variant='h3' style={{ fontFamily: "'Nunito', sans-serif", fontWeight: '700'}}>
       Hi, I am <span style={{color:'rgb(3,127,255)'}}>Roberth Gómez</span>
     </Typography>
@@ -63,11 +63,18 @@ const Content = () => {
       cursor: pointer;
     }
 
+    .console-underscore {
+      display:inline-block;
+     position:relative;
+     top:-0.14em;
+     left:10px;
+   }
+
     .particles {
       position: absolute;
-      width: 93vw;
-      margin-left: -260px;
-      margin-top: -220px;
+      width: 189.5vh;
+      margin-left: -30vh;
+      margin-top: -34vh;
       z-index: -1;
     }
 
