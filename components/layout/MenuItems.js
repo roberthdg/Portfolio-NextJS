@@ -76,7 +76,7 @@ const MenuItems = () => {
         margin-bottom: 50px;
       }
     `}</style>
-    <img src='logo.png' height='10%' style={{opacity:'0.4', position:'absolute', bottom:'5%',zIndex:'-1'}} />
+    <img src='logo.png' height='10%' draggable={false} style={{opacity:'0.4', position:'absolute', bottom:'5%',zIndex:'-1'}} />
     </Grid>
    
   )

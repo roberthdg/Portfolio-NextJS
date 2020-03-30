@@ -19,8 +19,8 @@ const Content = () => {
         </span>
       </Grid>
       <Grid container item xs={6} lg={6}>
-        <Link href='/'>
-          <a> Download CV </a>
+        <Link href='/roberth-gomez-cv.pdf'>
+          <a target="_blank"> Download CV </a>
         </Link>
       </Grid>
     </Grid>
@@ -35,7 +35,6 @@ const Content = () => {
     <br/><br/>
 
     <style jsx>{`
-
       a {
         text-align:center;
         text-transform: uppercase;
@@ -45,6 +44,7 @@ const Content = () => {
         text-decoration: none;
         color:rgb(255,255,255);
         background-color: rgb(3,127,255) !important;
+        cursor:pointer;
       }
 
       .about {
@@ -52,7 +52,6 @@ const Content = () => {
         font-size: 19px;
         margin-bottom: 30px;
       }
-
     `}</style>
 
     </>

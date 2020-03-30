@@ -7,7 +7,7 @@ import Particles from 'react-particles-js';
 const particlesParams={
   particles: {
     number: {
-      value:120,
+      value:150,
       density: {
         enable:true,
         value_area: 1500
@@ -70,12 +70,17 @@ const Content = () => {
      left:10px;
    }
 
-    .particles {
-      position: absolute;
-      width: 189.5vh;
-      margin-left: -30vh;
-      margin-top: -34vh;
-      z-index: -1;
+   .particles {
+    position: absolute;
+    z-index: -1;
+   }
+
+    @media screen and (min-width: 1142px) {
+      .particles {
+        width: 195vh;
+        right:0;
+        top:0;
+      }
     }
 
     @media screen and (max-width: 1142px) {

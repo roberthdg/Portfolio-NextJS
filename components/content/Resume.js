@@ -15,7 +15,6 @@ const workExperience = [
   {year: '2014 - 2016', title: 'IT Analyst', name: 'Productora y Distribuidora Venezolana de Alimentos S.A.', description: 'Nueva Esparta, Venezuela'}
 
 ];
-
 const studies = [
   {year: '2010 - 2015', title: 'Systems Engineer', name: 'Universidad Nacional Experimental de la Fuerza Armada', description: 'Achieved honorable mention (Cum Laude)'},
   {year: '2003 - 2008', title: "Bachelor's Degree in Secondary Education", name: 'U.E. Nuestra Señora de la Asunción', description: ''},
@@ -23,54 +22,53 @@ const studies = [
 
 const Content = () => {
   return(
-
     <div className='content'>
-    <Title>Resume</Title> 
-    <BusinessCenterOutlinedIcon style={iconStyle} /> 
-    <Typography variant='h5' style={subtitleStyle}> Working Experience</Typography> 
-    <div className='wrapper'>
-      {workExperience.map(item => (
-        <Grid container spacing={1}>
-          <Grid container item xs={11} lg={2}>
-            <div className='summary' />  
-            <div className='year'>
-              <Typography variant='h6' style={{fontWeight: '400'}}> {item.year} </Typography>
-            </div>
+      <Title>Resume</Title> 
+      <BusinessCenterOutlinedIcon style={iconStyle} /> 
+      <Typography variant='h5' style={subtitleStyle}> Work Experience</Typography> 
+      <div className='wrapper'>
+        {workExperience.map(item => (
+          <Grid container spacing={1}>
+            <Grid container item xs={11} lg={2}>
+              <div className='summary' />  
+              <div className='year'>
+                <Typography variant='h6' style={{fontWeight: '400'}}> {item.year} </Typography>
+              </div>
+            </Grid>
+            <Grid container item xs={11} lg={7} style={{marginLeft:'30px'}}>
+              <Typography variant='h6' style={{color:'rgb(3,127,255)'}}> 
+                {item.title} 
+                <Typography variant='h6' style={{color:'white', fontWeight: '400'}}>{item.name}</Typography>
+                <Typography variant='h6' style={{color:'rgb(164,172,185)', fontWeight: '300', marginBottom:'40px'}}>{item.description}</Typography> 
+              </Typography> 
+            </Grid>
           </Grid>
-          <Grid container item xs={11} lg={7} style={{marginLeft:'30px'}}>
-            <Typography variant='h6' style={{color:'rgb(3,127,255)'}}> 
-              {item.title} 
-              <Typography variant='h6' style={{color:'white', fontWeight: '400'}}>{item.name}</Typography>
-              <Typography variant='h6' style={{color:'rgb(164,172,185)', fontWeight: '300', marginBottom:'40px'}}>{item.description}</Typography> 
-            </Typography> 
-          </Grid>
-        </Grid>
-      ))}
-    </div>
+        ))}
+      </div>
 
-    <br/><br/>
+      <br/><br/>
 
-    <CollectionsBookmarkOutlinedIcon style={iconStyle} /> 
-    <Typography variant='h5' style={subtitleStyle}>Educational Qualifications</Typography> 
-    <div className='wrapper'>
-      {studies.map(item => (
-        <Grid container spacing={1}>
-          <Grid container item xs={11} lg={2}>
-            <div className='summary' />  
-            <div className='year'>
-              <Typography variant='h6' style={{fontWeight: '400'}}> {item.year} </Typography>
-            </div>
+      <CollectionsBookmarkOutlinedIcon style={iconStyle} /> 
+      <Typography variant='h5' style={subtitleStyle}>Educational Qualifications</Typography> 
+      <div className='wrapper'>
+        {studies.map(item => (
+          <Grid container spacing={1}>
+            <Grid container item xs={11} lg={2}>
+              <div className='summary' />  
+              <div className='year'>
+                <Typography variant='h6' style={{fontWeight: '400'}}> {item.year} </Typography>
+              </div>
+            </Grid>
+            <Grid container item xs={11} lg={7} style={{marginLeft:'30px'}}>
+              <Typography variant='h6' style={{color:'rgb(3,127,255)'}}> 
+                {item.title} 
+                <Typography variant='h6' style={{color:'white', fontWeight: '400'}}>{item.name}</Typography>
+                <Typography variant='h6' style={{color:'rgb(164,172,185)', fontWeight: '300', marginBottom:'40px'}}>{item.description}</Typography> 
+              </Typography> 
+            </Grid>
           </Grid>
-          <Grid container item xs={11} lg={7} style={{marginLeft:'30px'}}>
-            <Typography variant='h6' style={{color:'rgb(3,127,255)'}}> 
-              {item.title} 
-              <Typography variant='h6' style={{color:'white', fontWeight: '400'}}>{item.name}</Typography>
-              <Typography variant='h6' style={{color:'rgb(164,172,185)', fontWeight: '300', marginBottom:'40px'}}>{item.description}</Typography> 
-            </Typography> 
-          </Grid>
-        </Grid>
-      ))}
-    </div>
+        ))}
+      </div>
   
     <style jsx>{`
 
@@ -110,7 +108,7 @@ const Content = () => {
       }
 
     `}</style>
-   </div>
+  </div>
   )
 }
 

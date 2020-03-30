@@ -6,7 +6,6 @@ const Title = props => {
     <div>
     <Typography component={'span'} variant='h4'>
         <h3> <span>{props.children}</span> {props.children}</h3>
-        
     </Typography>
 
     <style jsx>{`
