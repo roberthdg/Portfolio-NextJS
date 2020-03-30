@@ -55,7 +55,7 @@ const Content = () => {
 
     return(
         <>
-        <Grid container item xs={"auto"} md={6} lg={6} spacing={4}>
+        <Grid container item xs={11} md={6} lg={6} spacing={4}>
             <Grid item xs={12}>
                 {displayLoader? <div className='loader'> <CircularProgress size='80px' style={{color:'rgb(3,127,255)'}} /> </div> : null}
                 <TextField required fullWidth={true} variant="outlined"
@@ -98,7 +98,7 @@ const Content = () => {
             : null }
 
             {displayAlert===2
-            ? <Grid item xs={12} ><Alert onClose={() => setDisplayAlert(false)} severity="warning">Fill all required fields </Alert></Grid> 
+            ? <Grid item xs={12} ><Alert onClose={() => setDisplayAlert(false)} severity="warning">You must fill all required fields </Alert></Grid> 
             : null }
 
             {displayAlert===3
