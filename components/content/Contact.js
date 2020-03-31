@@ -10,11 +10,11 @@ const Content = () => {
   return(
     <>
     <Title>Contact Me</Title>
-    <Grid container >
+    <Grid container>
       {/* Contact form grid */}
       <FormGrid />
-      <Grid item xs={11} md={6} lg={6} >
-        <Grid item xs={12} > 
+      <Grid item xs={12} md={6} lg={6} >
+        <Grid item xs={10} > 
           <div className='info'> 
             <Grid container>
               <Grid item xs={3} lg={1}  style={{marginRight:'10%'}}>
@@ -32,7 +32,7 @@ const Content = () => {
           </div> 
         </Grid >  
 
-        <Grid item xs={12}> 
+        <Grid item xs={10}> 
           <div className='info'> 
             <Grid container>
               <Grid item xs={3} lg={1} style={{marginRight:'10%'}}>
@@ -73,9 +73,9 @@ const Content = () => {
       @media screen and (max-width: 1142px) {
         .info{
           margin-top: 35px;
-          padding: 7vw;
+          padding: 5vw;
           margin-left: 0px;
-          width: 75%;
+          width: 95%;
         }
 
         .iconGrid {

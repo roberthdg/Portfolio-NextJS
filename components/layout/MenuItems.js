@@ -1,7 +1,7 @@
 import React from 'react'
 import ListItemText from '@material-ui/core/ListItemText';
 import Avatar from '@material-ui/core/Avatar';
-import { Grid } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -76,7 +76,8 @@ const MenuItems = () => {
         margin-bottom: 50px;
       }
     `}</style>
-    <img src='logo.png' height='10%' draggable={false} style={{opacity:'0.4', position:'absolute', bottom:'5%',zIndex:'-1'}} />
+    <img src='logo.png' height='10%' draggable={false} style={{opacity:'0.4', position:'absolute', bottom:'60px',zIndex:'-1'}} />
+    <Typography style={{bottom: '20px', position: 'absolute', fontWeight: '200'}}> &copy; 2020 Roberth Gómez</Typography>
     </Grid>
    
   )

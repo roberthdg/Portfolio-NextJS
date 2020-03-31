@@ -73,6 +73,7 @@ function Layout(props) {
 
       @media screen and (max-width: 1142px) {
         main {
+          max-width:90%;
           margin: 4em 5% 5em 2em;
         }
       }

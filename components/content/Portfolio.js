@@ -57,7 +57,7 @@ const Content = () => {
 
                 <Grid container item xs={10} justify="center">
                     <img src="laptop.png" className='laptop' draggable={false} />
-                    <img src={`${projectsData[currentItem].id}-laptop.jpg`} draggable={false} className='screen desktop' onLoad={() => {setImgLoaded(true)}}/> 
+                    <img src={`${projectsData[currentItem].id}-laptop.jpg`} draggable={false} className='screen desktop' style={setImgLoaded? null : {display:'none'}}onLoad={() => {setImgLoaded(true)}}/> 
                 
                     <img src="phone.png" className='phone' draggable={false} />
                     <img src={`${projectsData[currentItem].id}-phone.jpg`} draggable={false} className='screen mobile'onLoad={() => setImgLoaded(true)}/> 
