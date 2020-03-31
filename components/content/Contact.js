@@ -17,7 +17,7 @@ const Content = () => {
         <Grid item xs={10} > 
           <div className='info'> 
             <Grid container>
-              <Grid item xs={3} lg={1}  style={{marginRight:'10%'}}>
+              <Grid item xs={3} lg={2}  style={{marginRight:'10%'}}>
                 <div className='iconGrid'>
                   <PhoneIcon style={{fontSize:'45px'}}/>
                 </div>
@@ -35,7 +35,7 @@ const Content = () => {
         <Grid item xs={10}> 
           <div className='info'> 
             <Grid container>
-              <Grid item xs={3} lg={1} style={{marginRight:'10%'}}>
+              <Grid item xs={3} lg={2} style={{marginRight:'10%'}}>
                 <div className='iconGrid'>
                  <MailIcon style={{fontSize:'45px'}}/>
                 </div>
@@ -58,7 +58,7 @@ const Content = () => {
         background-color: rgb(25,29,43);
         padding: 3vh;
         color: rgb(144,150,173);
-        width: 80%;
+        width: 40vh;
         margin-left: 50px;
         margin-bottom: 20px;
         margin-right: 150px;

@@ -40,7 +40,7 @@ const Content = () => {
     <Title>Skills</Title>
     <Grid container spacing={1}>
       <Grid container item xs={12} spacing={1}>
-        {renderRows([{'JavaScript': 85}, {'CSS/SCSS': 80}])}
+        {renderRows([{'JavaScript': 85}, {'HTML5/CSS3': 85}])}
       </Grid>
       <Grid container item xs={12} spacing={1}>
         {renderRows([{'React': 77}, {'Redux': 70}])}

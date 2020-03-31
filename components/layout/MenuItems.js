@@ -23,7 +23,7 @@ const MenuItems = () => {
     alignItems="center"
     justify="center"
     >
-      <Avatar alt="profile picture" src="/brand-image.jpg" style={avatarStyle} /> <hr/>
+      <Avatar alt="profile picture" src="/brand-image.jpg" imgProps={{draggable:'false'}} style={avatarStyle} /> <hr/>
       
       {['', 'about', 'portfolio', 'contact'].map((text, index) => (
       <Link key={index} href={index==0 ? '/' : text} >
@@ -76,8 +76,8 @@ const MenuItems = () => {
         margin-bottom: 50px;
       }
     `}</style>
-    <img src='logo.png' height='10%' draggable={false} style={{opacity:'0.4', position:'absolute', bottom:'60px',zIndex:'-1'}} />
-    <Typography style={{bottom: '20px', position: 'absolute', fontWeight: '200'}}> &copy; 2020 Roberth Gómez</Typography>
+    <img src='logo.png' height='9%' draggable={false} style={{opacity:'0.4', position:'absolute', bottom:'60px',zIndex:'-1'}} />
+    <Typography style={{bottom: '20px', position: 'absolute', fontWeight: '200', fontSize: '14px'}}> &copy; 2020 Roberth Gómez</Typography>
     </Grid>
    
   )

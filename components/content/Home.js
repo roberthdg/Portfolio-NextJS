@@ -3,6 +3,7 @@ import { loadCSS } from 'fg-loadcss';
 import Typography from '@material-ui/core/Typography';
 import Icon from '@material-ui/core/Icon';
 import Particles from 'react-particles-js';
+import Link from '@material-ui/core/Link';
 
 const particlesParams={
   particles: {
@@ -38,9 +39,12 @@ const Content = () => {
       Full-Stack Developer <br/>  React / Node.js / MongoDB  
     </Typography>
 
-    <a><Icon className="fa fa-2x fa-envelope"/></a>
-    <a><Icon className="fab fa-2x fa-github"/></a>
-    <a><Icon className="fab fa-2x fa-linkedin"/></a>
+    <Link href="/contact"><a><Icon className="fa fa-2x fa-envelope"/></a></Link>
+    <Link><a target="_blank" href="https://github.com/roberthdg"><Icon className="fab fa-2x fa-github"/></a></Link>
+    <Link><a target="_blank" href="https://www.linkedin.com/in/roberthdg/"><Icon className="fab fa-2x fa-linkedin"/></a></Link>
+    
+    
+    
 
     <style jsx>{`
     .home {
