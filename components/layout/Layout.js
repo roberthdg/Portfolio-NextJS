@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head'
 import { makeStyles } from '@material-ui/core/styles';
 import DrawerMenu from './DrawerMenu'
@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => ({
 function Layout(props) {
   const { container } = props;
   const classes = useStyles();
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };

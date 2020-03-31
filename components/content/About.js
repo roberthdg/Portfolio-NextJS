@@ -54,11 +54,9 @@ const Content = () => {
       }
 
       @media screen and (min-width: 1142px) {
-
         a {
           margin-left: 5vh;
         }
-  
       }
     `}</style>
 
