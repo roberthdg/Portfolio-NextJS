@@ -25,7 +25,7 @@ const projectsData = [
     {
         id:'coinhub',
         name:'Coinhub',
-        description:`Web app designed with Material-UI, multi-language support and light/dark themes enabled using React's Context API. 
+        description:`Web app designed with Material-UI. Multi-language support and light/dark themes enabled using React's Context API. 
         Monitor cryptocurrency prices and calculate costs in your local currency using up-to-date exchange rates.`,
         tools:['nodejs', 'express', 'jquery','bootstrap'],
         links:['https://coinhub-react.herokuapp.com/', 'https://github.com/roberthdg/Coinhub-material-UI']
@@ -57,10 +57,10 @@ const Content = () => {
 
                 <Grid container item xs={10} justify="center">
                     <img src="laptop.png" className='laptop' draggable={false} />
-                    <img src={`${projectsData[currentItem].id}-laptop.jpg`} draggable={false} className={imgLoaded? 'screen desktop' : 'screen none'} onLoad={() => {setImgLoaded(true)}}/> 
+                    <img src={`${projectsData[currentItem].id}-laptop.jpg`} draggable={false} className={imgLoaded? 'screen desktop' : 'none'} onLoad={() => {setImgLoaded(true)}}/> 
                 
                     <img src="phone.png" className='phone' draggable={false} />
-                    <img src={`${projectsData[currentItem].id}-phone.jpg`} draggable={false} className={imgLoaded? 'screen mobile' : 'screen none'} onLoad={() => setImgLoaded(true)}/> 
+                    <img src={`${projectsData[currentItem].id}-phone.jpg`} draggable={false} className={imgLoaded? 'screen mobile' : 'none'} onLoad={() => setImgLoaded(true)}/> 
                    
                     {imgLoaded? null : <div className='loader'> <CircularProgress size='80px' style={{color:'rgb(3,127,255)'}} /> </div> }
 

@@ -10,11 +10,11 @@ const Content = () => {
   return(
     <>
     <Title>About me</Title>
-    <Typography>
+    <Typography component='span'>
     <Grid container spacing={1}>
       <Grid container item xs={11} lg={6}>
         <span className='about'>
-          Systems engineer from Venezuela, with over 5 years of experience as a software developer, 
+          Systems engineer from Venezuela with over 5 years of experience as a software developer, 
           working on projects accross multiple platforms and programming languages.
         </span>
       </Grid>

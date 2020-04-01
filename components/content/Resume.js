@@ -27,8 +27,8 @@ const Content = () => {
       <BusinessCenterOutlinedIcon style={iconStyle} /> 
       <Typography variant='h5' style={subtitleStyle}> Work Experience</Typography> 
       <div className='wrapper'>
-        {workExperience.map(item => (
-          <Grid container spacing={1}>
+        {workExperience.map((item,i) => (
+          <Grid container spacing={1} key={i}>
             <Grid container item xs={11} lg={2}>
               <div className='summary' />  
               <div className='year'>
@@ -51,8 +51,8 @@ const Content = () => {
       <CollectionsBookmarkOutlinedIcon style={iconStyle} /> 
       <Typography variant='h5' style={subtitleStyle}>Educational Qualifications</Typography> 
       <div className='wrapper'>
-        {studies.map(item => (
-          <Grid container spacing={1}>
+        {studies.map((item,i) => (
+          <Grid container spacing={1} key={i}>
             <Grid container item xs={11} lg={2}>
               <div className='summary' />  
               <div className='year'>

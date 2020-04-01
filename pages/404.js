@@ -10,7 +10,7 @@ const Content = () => (
     <Layout>
         <div className='notFound'>
             <Typography variant='h3' style={{ fontFamily: "'Nunito', sans-serif", fontWeight: '700'}}>
-            <span style={{color:'rgb(3,127,255)'}}>404</span> page not found
+                <span style={{color:'rgb(3,127,255)'}}>404</span> page not found
             </Typography>
         </div>
     </Layout>

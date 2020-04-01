@@ -46,7 +46,7 @@ const Content = () => {
         {renderRows([{'React': 77}, {'Redux': 70}])}
       </Grid>
       <Grid container item xs={12} spacing={1}>
-        {renderRows([{'Python': 80}, {'SQL/NoSQL': 82}])}
+        {renderRows([{'Python': 80}, {'SQL/NoSQL': 78}])}
       </Grid>
     </Grid>
     </>

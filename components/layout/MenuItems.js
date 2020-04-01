@@ -76,8 +76,8 @@ const MenuItems = () => {
         margin-bottom: 50px;
       }
     `}</style>
-    <img src='logo.png' height='9%' draggable={false} style={{opacity:'0.4', position:'absolute', bottom:'60px',zIndex:'-1'}} />
-    <Typography style={{bottom: '20px', position: 'absolute', fontWeight: '200', fontSize: '14px'}}> &copy; 2020 Roberth Gómez</Typography>
+    <img src='logo.png' height='50px' draggable={false} style={{opacity:'0.4', position:'absolute', bottom:'60px',zIndex:'-1'}} />
+    <Typography style={{bottom: '20px', position: 'absolute', fontWeight: '200', fontSize: '14px'}}> &copy; {(new Date().getFullYear())} Roberth Gómez</Typography>
     </Grid>
    
   )

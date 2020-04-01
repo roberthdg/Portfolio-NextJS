@@ -13,7 +13,7 @@ const Content = () => {
     <Grid container>
       {/* Contact form grid */}
       <FormGrid />
-      <Grid item xs={12} md={6} lg={6} >
+      <Grid item xs={12} md={12} lg={6} >
         <Grid item xs={10} > 
           <div className='info'> 
             <Grid container>
