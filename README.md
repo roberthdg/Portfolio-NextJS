@@ -16,7 +16,7 @@ $ npm run start
 ## Technologies
 Project created with:
 * React
-* NextJS
+* Next.js
 * Material-UI
 * Particles.js 
 
