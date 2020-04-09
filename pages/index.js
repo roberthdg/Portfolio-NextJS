@@ -5,7 +5,7 @@ import Head from 'next/head';
 const Index = () => (
     <>
     <Head>
-      <title> Roberth Gómez - Home </title>
+      <title>Roberth Gómez | Full-Stack Developer</title>
     </Head>
     <Layout>
         <Home/>

@@ -13,6 +13,7 @@ const Title = props => {
         font-family: 'Nunito', sans-serif; !important;
         margin: 0 0 40px 0 !important;
         position: relative;
+        font-size: 35px;
         padding-bottom: 15px;
         text-transform: uppercase;
       }
@@ -39,7 +40,7 @@ const Title = props => {
       span {
         color: rgb(20,23,34);
         position: absolute;
-        font-size: 58px;
+        font-size: 50px;
         font-weight: 800;
         margin-top: 30px;
         z-index: -12;

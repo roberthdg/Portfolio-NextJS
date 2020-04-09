@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 const Content = () => (
     <>
     <Head>
-      <title> Roberth Gómez - Page not found </title>
+      <title>Roberth Gómez | Page not found </title>
     </Head>
     <Layout>
         <div className='notFound'>

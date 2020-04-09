@@ -5,7 +5,7 @@ import Head from 'next/head';
 const AboutPage = () => (
     <>
     <Head>
-      <title> Roberth Gómez - About </title>
+      <title>Roberth Gómez | About </title>
     </Head>
     <Layout>
         <About/>

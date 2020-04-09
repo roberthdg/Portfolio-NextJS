@@ -6,8 +6,8 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 const avatarStyle = {
-  width:'140px', 
-  height:'140px',  
+  width:'120px', 
+  height:'120px',  
   marginLeft: '5px',
   border: '5px solid rgb(46,52,78)',
   marginTop: '25px',
@@ -76,7 +76,7 @@ const MenuItems = () => {
         margin-bottom: 50px;
       }
     `}</style>
-    <img src='logo.png' height='50px' draggable={false} style={{opacity:'0.4', position:'absolute', bottom:'60px',zIndex:'-1'}} />
+    <img src='logo.png' alt='logo' height='50px' draggable={false} style={{opacity:'0.4', position:'absolute', bottom:'60px',zIndex:'-1'}} />
     <Typography style={{bottom: '20px', position: 'absolute', fontWeight: '200', fontSize: '14px'}}> &copy; {(new Date().getFullYear())} Roberth Gómez</Typography>
     </Grid>
    

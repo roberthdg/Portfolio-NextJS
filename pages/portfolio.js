@@ -5,7 +5,7 @@ import Head from 'next/head';
 const PortfolioPage = () => (
      <>
     <Head>
-      <title> Roberth Gómez - Portfolio </title>
+      <title>Roberth Gómez | Portfolio</title>
     </Head>
     <Layout>
         <Portfolio/>
