@@ -22,4 +22,4 @@ Project created with:
 
 ## General info
 
-Monitor cryptocurrency prices and calculate costs in your local currency using up-to-date exchange rates.
+Built with Material-UI, SSR provided by Next, connected to a custom-built API (to send emails) using fetch.
