@@ -63,6 +63,7 @@ function Layout(props) {
     <style jsx>{`
       :global(body){ 
         background-color: rgb(16,18,27); 
+        user-select: none;
       }
       main {
         color: white;

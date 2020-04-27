@@ -24,7 +24,7 @@ const Content = () => {
               </Grid>
               <Grid item xs={7} >
                 <Typography variant='h6' style={{color:'white'}}>Phone</Typography>
-                <Typography>
+                <Typography style={{userSelect:"text"}}>
                   +58 424 832 12 69 <br/>
                 </Typography>
               </Grid>
@@ -42,8 +42,8 @@ const Content = () => {
               </Grid>
               <Grid item xs={7} >
                 <Typography variant='h6' style={{color:'white'}}>Email</Typography>
-                <Typography>
-                  roberthdgg@gmail.com  <br/>
+                <Typography style={{userSelect:"text"}}>
+                  roberthdgg@gmail.com <br/>
                 </Typography>
               </Grid>
             </Grid>

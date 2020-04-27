@@ -11,10 +11,10 @@ const subtitleStyle = {fontWeight:'700', fontFamily: "'Nunito', sans-serif", mar
 const iconStyle = {color: 'rgb(164,172,185)', fontSize: '30', position:'absolute', marginLeft: '-10px'}
 
 const workExperience = [
-  {year: '2019 - 2020', title: 'Full-Stack Developer', name: 'Fletes Ya! - Santiago Province, Chile (Remote)', description: 'Web development (JavaScript, CSS3/Bootstrap), database design (MySQL), REST API (Node.js) and mobile (Kotlin) development.'},
-  {year: '2017 - 2019', title: 'Full-Stack Developer', name: 'Global Solution Outsourcing Group - Quito, Ecuador (Remote)', description: 'Web development (Python/Django, JavaScript, CSS3/Bootstrap), hosting configuration and database management (PostgreSQL).'},
-  {year: '2016 - 2017', title: 'IT Regional Coordinator', name: 'Productora y Distribuidora Venezolana de Alimentos S.A. - Nueva Esparta, Venezuela', description: 'Network installation, server configuration (Ubuntu server), database management, systems testing and supervision.'},
-  {year: '2014 - 2016', title: 'IT Analyst', name: 'Productora y Distribuidora Venezolana de Alimentos S.A. - Nueva Esparta, Venezuela', description: 'Web app development (PHP, JavaScript, CSS and MySQL), staff training on propietary software, IT support.'}
+  {year: 'Feb. 2019 - Mar. 2020', title: 'Full-Stack Developer', name: 'Fletes Ya! - Santiago Province, Chile (Remote)', description: 'Web development (JavaScript, CSS3/Bootstrap), database design (MySQL), REST API (Node.js) and mobile (Kotlin) development.'},
+  {year: 'Jul. 2017 - Feb. 2019', title: 'Full-Stack Developer', name: 'Global Solution Outsourcing Group - Quito, Ecuador (Remote)', description: 'Web development (Python/Django, JavaScript, CSS3/Bootstrap), hosting configuration and database management (PostgreSQL).'},
+  {year: 'Mar. 2016 - Apr. 2017', title: 'IT Regional Coordinator', name: 'Productora y Distribuidora Venezolana de Alimentos S.A. - Nueva Esparta, Venezuela', description: 'Network installation, server configuration (Ubuntu server), database management, systems testing and supervision.'},
+  {year: 'Oct. 2014 - Mar. 2016', title: 'IT Analyst', name: 'Productora y Distribuidora Venezolana de Alimentos S.A. - Nueva Esparta, Venezuela', description: 'Web app development (PHP, JavaScript, CSS and MySQL), staff training on propietary software, IT support.'}
 
 ];
 
@@ -28,6 +28,22 @@ const languages = [
   {language: 'English', description: 'Full Professional Proficiency'},
   {language: 'Portuguese', description: 'Limited Working Proficiency'},
 ]
+
+const volunteering = [
+  {
+    year:'Apr. 2020 - Present',
+    organization: 'UENSA Labs',
+    link:'https://github.com/UENSA-Labs',
+    position:'Collaborator'
+  },
+  {
+    year:'Jul. 2017 - Feb. 2018',
+    organization: 'Decred Project',
+    link:'https://decred.org/es/',
+    position:'Translator / Brand Ambassador'
+  }
+]
+
 
 const Content = () => {
   return(
@@ -112,23 +128,25 @@ const Content = () => {
       <PanToolOutlinedIcon style={iconStyle} /> 
       <Typography variant='h5' style={subtitleStyle}>Volunteering</Typography> 
       <div className='wrapper'>
-        <Grid container spacing={1}>
-          <Grid container item xs={11} lg={2}>
-            <div className='summary' />  
-            <div className='year'>
-              <Typography variant='h6' style={{fontWeight: '400'}}> 2017 - 2018 </Typography>
-            </div>
+        {volunteering.map((item,i) => (
+          <Grid container spacing={1}>
+            <Grid container item xs={11} lg={2}>
+              <div className='summary' />  
+              <div className='year'>
+                <Typography variant='h6' style={{fontWeight: '400'}}> {item.year} </Typography>
+              </div>
+            </Grid>
+            <Grid container item xs={11} lg={7} style={{marginLeft:'30px'}}>
+              <Typography variant='h6' style={{color:'rgb(3,127,255)'}}> 
+                {item.position}
+                <Typography variant='h6' style={{color:'white', fontWeight: '400'}}>
+                  <a href={item.link} target='_blank' style={{textDecoration:'none', cursor:'pointer', color:'white'}}>{item.organization}</a>
+                </Typography>   
+                <br />
+              </Typography> 
+            </Grid>
           </Grid>
-          <Grid container item xs={11} lg={7} style={{marginLeft:'30px'}}>
-            <Typography variant='h6' style={{color:'rgb(3,127,255)'}}> 
-              Translator / Brand Ambassador
-              <Typography variant='h6' style={{color:'white', fontWeight: '400'}}>
-                <a href='https://decred.org/es/' target='_blank' style={{textDecoration:'none', cursor:'pointer', color:'white'}}>Decred Project</a>
-              </Typography>   
-              <br />
-            </Typography> 
-          </Grid>
-        </Grid>
+        ))}
       </div>
   
     <style jsx>{`
