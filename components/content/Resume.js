@@ -11,6 +11,7 @@ const subtitleStyle = {fontWeight:'700', fontFamily: "'Nunito', sans-serif", mar
 const iconStyle = {color: 'rgb(164,172,185)', fontSize: '30', position:'absolute', marginLeft: '-10px'}
 
 const workExperience = [
+  {year: 'May. 2019 - present', title: 'Full-Stack Developer', name: 'Bees2Biz - Bogotá, Colombia (Remote)', description: 'Front-end development (VueJS), database design (MySQL), API development (Django REST framework).'},
   {year: 'Feb. 2019 - Mar. 2020', title: 'Full-Stack Developer', name: 'Fletes Ya! - Santiago Province, Chile (Remote)', description: 'Web development (JavaScript, CSS3/Bootstrap), database design (MySQL), REST API (Node.js) and mobile (Kotlin) development.'},
   {year: 'Jul. 2017 - Feb. 2019', title: 'Full-Stack Developer', name: 'Global Solution Outsourcing Group - Quito, Ecuador (Remote)', description: 'Web development (Python/Django, JavaScript, CSS3/Bootstrap), hosting configuration and database management (PostgreSQL).'},
   {year: 'Mar. 2016 - Apr. 2017', title: 'IT Regional Coordinator', name: 'Productora y Distribuidora Venezolana de Alimentos S.A. - Nueva Esparta, Venezuela', description: 'Network installation, server configuration (Ubuntu server), database management, systems testing and supervision.'},
