@@ -14,7 +14,7 @@ const Content = () => {
     <Grid container spacing={1}>
       <Grid container item xs={11} lg={6}>
         <span className='about'>
-          Systems engineer from Venezuela with over 4 years of experience as a software developer, 
+          Systems engineer from Venezuela with over 3 years of experience as a software developer, 
           working on projects accross multiple platforms and programming languages.
         </span>
       </Grid>
